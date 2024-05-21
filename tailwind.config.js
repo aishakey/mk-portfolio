@@ -7,10 +7,15 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        "custom-heading": ["Fredoka", "sans-serif"],
+        "custom-paragraph": ["Poppins", "sans-serif"],
+        "custom-extra": ["Bubblegum Sans", "sans-serif"],
+      },
+      colors: {
+        "dark-blue": "#101E60",
+        "main-pink": "#FF48B0",
+        "light-blue": "#BBF7FF",
       },
     },
   },
