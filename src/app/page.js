@@ -1,3 +1,17 @@
+import Hero from "../components/Hero";
+import About from "../components/About";
+import Tools from "../components/Tools";
+import Projects from "../components/Projects";
+import Contact from "../components/Contact";
+
 export default function HomePage() {
-  return <div>HomePage</div>;
+  return (
+    <main>
+      <Hero />
+      <About />
+      <Tools />
+      <Projects />
+      <Contact />
+    </main>
+  );
 }

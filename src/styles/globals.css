@@ -9,3 +9,33 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+  color: #101e60;
+}
+
+h1,
+h2 {
+  font-family: "Fredoka", sans-serif;
+}
+
+h3,
+h4 {
+  font-family: "Bubblegum Sans", sans-serif;
+  color: #ff48b0;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+}
