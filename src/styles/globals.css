@@ -39,3 +39,23 @@ a {
   text-decoration: none;
   font-weight: 600;
 }
+
+/* Stacking Cards */
+
+.stack-cards {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.stack-cards__item {
+  position: sticky;
+  top: 1rem;
+  transform-origin: center top;
+  transition: transform 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .stack-cards {
+    grid-gap: 0;
+  }
+}
