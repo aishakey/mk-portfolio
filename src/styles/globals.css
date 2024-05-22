@@ -59,3 +59,22 @@ a {
     grid-gap: 0;
   }
 }
+
+/* Gradients */
+
+.bg-gradient-white {
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+.border-gradient-white {
+  border: 1px solid;
+  border-image-source: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-image-slice: 1;
+}

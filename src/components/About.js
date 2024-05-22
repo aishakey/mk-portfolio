@@ -44,7 +44,7 @@ export default function About() {
   return (
     <Section id="about" title="About">
       <ul className="stack-cards js-stack-cards">
-        <li className="stack-cards__item js-stack-cards__item relative bg-[#C5F7FF] border-4 border-[#02A3DC] rounded-xl p-4 mb-6 mx-32 h-96 flex items-center justify-center overflow-hidden">
+        <li className="stack-cards__item js-stack-cards__item relative bg-[#C5F7FF] border-4 border-[#02A3DC] rounded-xl p-4 mb-6 mx-36 h-96 flex items-center justify-center overflow-hidden">
           <Image
             src="/blob1_1.svg"
             alt="Blob 1"
@@ -81,7 +81,7 @@ export default function About() {
             </p>
           </div>
         </li>
-        <li className="stack-cards__item js-stack-cards__item relative bg-[#D5E2FF] border-4 border-[#7FA6FF] rounded-xl p-4 mb-4 mx-32 h-96 flex items-center justify-center overflow-hidden">
+        <li className="stack-cards__item js-stack-cards__item relative bg-[#D5E2FF] border-4 border-[#7FA6FF] rounded-xl p-4 mb-4 mx-36 h-96 flex items-center justify-center overflow-hidden">
           <Image
             src="/blob2_1.svg"
             alt="Blob 3"
@@ -118,7 +118,7 @@ export default function About() {
             </p>
           </div>
         </li>
-        <li className="stack-cards__item js-stack-cards__item relative bg-[#FFE1F2] border-4 border-[#FF48B0] rounded-xl p-4 mb-4 mx-32 h-96 flex items-center justify-center overflow-hidden">
+        <li className="stack-cards__item js-stack-cards__item relative bg-[#FFE1F2] border-4 border-[#FF48B0] rounded-xl p-4 mb-4 mx-36 h-96 flex items-center justify-center overflow-hidden">
           <Image
             src="/blob3_1.svg"
             alt="Blob 5"
