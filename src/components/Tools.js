@@ -1,7 +1,7 @@
 import Section from "./Section";
 import Image from "next/image";
 
-const Tools = () => {
+export default function Tools() {
   return (
     <Section id="tools" title="Tools">
       <div className="flex flex-wrap justify-between mx-36">
@@ -38,7 +38,6 @@ const Tools = () => {
             <p className="text-center font-normal">Other</p>
           </div>
           <div className="flex flex-wrap justify-center items-center mt-12 space-y-4">
-            <Image src="/pug.svg" alt="Pug" width={60} height={60} />
             <Image src="/postman.svg" alt="Postman" width={60} height={60} />
             <Image src="/figma.svg" alt="Figma" width={60} height={60} />
             <Image src="/git.svg" alt="Git" width={60} height={60} />
@@ -52,6 +51,4 @@ const Tools = () => {
       </div>
     </Section>
   );
-};
-
-export default Tools;
+}
