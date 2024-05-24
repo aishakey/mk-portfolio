@@ -40,6 +40,10 @@ a {
   font-weight: 600;
 }
 
+textarea {
+  resize: none;
+}
+
 /* Stacking Cards */
 
 .stack-cards {
