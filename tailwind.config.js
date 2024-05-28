@@ -19,14 +19,27 @@ module.exports = {
         "pink-200": "#FFBCE2",
         "blue-200": "#B2F5FE",
         "blue-300": "#D5E2FF",
-        "teal-100": "#EAFFFE",
+        "teal-100": "#EFFDFF",
       },
       backgroundImage: {
         "gradient-to-b": "linear-gradient(to bottom, var(--tw-gradient-stops))",
       },
       gradientColorStops: {
-        white: "rgba(255, 255, 255, 1)",
-        transparent: "rgba(255, 255, 255, 0)",
+        "pink-to-transparent": {
+          "0%": "#FFBCE2",
+          "70%": "rgba(255, 255, 255, 0.3)",
+          "100%": "rgba(255, 255, 255, 0)",
+        },
+        "blue-to-transparent": {
+          "0%": "#B2F5FE",
+          "90%": "rgba(255, 255, 255, 0.3)",
+          "100%": "rgba(255, 255, 255, 0)",
+        },
+        "blue-300-to-teal-100": {
+          "0%": "#D5E2FF",
+          "70%": "#EFFDFF",
+          "100%": "rgba(255, 255, 255, 0)",
+        },
       },
     },
   },
