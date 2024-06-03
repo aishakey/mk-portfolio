@@ -41,6 +41,15 @@ module.exports = {
           "100%": "rgba(255, 255, 255, 0)",
         },
       },
+      transitionProperty: {
+        width: "width",
+        spacing: "margin, padding",
+      },
+    },
+  },
+  variants: {
+    extend: {
+      scale: ["group-hover"],
     },
   },
   plugins: [],

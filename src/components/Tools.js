@@ -1,11 +1,39 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Section from "./Section";
 import { gsap } from "gsap";
 
 export default function Tools() {
+  const sectionRef = useRef(null);
+
   useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          startAnimation();
+          observer.disconnect();
+        }
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5,
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+  const startAnimation = () => {
     if (window.innerWidth >= 1024) {
       const leftTimeline = gsap.timeline();
       const rightTimeline = gsap.timeline();
@@ -23,23 +51,23 @@ export default function Tools() {
       }));
 
       const leftBubblePositions = [
-        { left: "70%", bottom: "10%" },
+        { left: "42%", bottom: "9%" },
         { left: "20%", bottom: "9%" },
+        { left: "67%", bottom: "14%" },
         { left: "26%", bottom: "29%" },
         { left: "56%", bottom: "32%" },
         { left: "38%", bottom: "50%" },
         { left: "42%", bottom: "70%" },
-        { left: "46%", bottom: "8%" },
       ];
 
       const rightBubblePositions = [
-        { left: "20%", bottom: "10%" },
-        { left: "24%", bottom: "30%" },
-        { left: "70%", bottom: "14%" },
-        { left: "52%", bottom: "34%" },
-        { left: "40%", bottom: "70%" },
-        { left: "38%", bottom: "50%" },
         { left: "46%", bottom: "9%" },
+        { left: "20%", bottom: "10%" },
+        { left: "70%", bottom: "14%" },
+        { left: "24%", bottom: "30%" },
+        { left: "52%", bottom: "34%" },
+        { left: "38%", bottom: "50%" },
+        { left: "40%", bottom: "70%" },
       ];
 
       const createRippleEffect = (flaskId) => {
@@ -58,13 +86,13 @@ export default function Tools() {
       };
 
       leftDrops.forEach((drop, index) => {
-        const delay = index * 1; // 1 second delay between each drop
+        const delay = index * 0.7;
 
         leftTimeline.to(
           `#${drop.id}`,
           {
-            y: 230, // Adjust based on flask position
-            duration: 1,
+            y: 230,
+            duration: 0.7,
             ease: "power1.in",
             onStart: () => {
               const dropElement = document.getElementById(drop.id);
@@ -82,9 +110,8 @@ export default function Tools() {
               createRippleEffect("leftFlask");
               gsap.to(`#${drop.id}`, {
                 opacity: 0,
-                duration: 0.3,
+                duration: 0.2,
                 onComplete: () => {
-                  // Show the corresponding bubble
                   const bubble = document.getElementById(drop.bubbleId);
                   if (bubble) {
                     bubble.style.opacity = 1;
@@ -99,13 +126,13 @@ export default function Tools() {
       });
 
       rightDrops.forEach((drop, index) => {
-        const delay = index * 1; // 1 second delay between each drop
+        const delay = index * 0.7;
 
         rightTimeline.to(
           `#${drop.id}`,
           {
-            y: 230, // Adjust based on flask position
-            duration: 1,
+            y: 230,
+            duration: 0.7,
             ease: "power1.in",
             onStart: () => {
               const dropElement = document.getElementById(drop.id);
@@ -123,9 +150,8 @@ export default function Tools() {
               createRippleEffect("rightFlask");
               gsap.to(`#${drop.id}`, {
                 opacity: 0,
-                duration: 0.3,
+                duration: 0.2,
                 onComplete: () => {
-                  // Show the corresponding bubble
                   const bubble = document.getElementById(drop.bubbleId);
                   if (bubble) {
                     bubble.style.opacity = 1;
@@ -139,7 +165,6 @@ export default function Tools() {
         );
       });
 
-      // Set bubble positions manually
       leftBubblePositions.forEach((pos, index) => {
         const bubble = document.getElementById(`leftBubble${index + 1}`);
         if (bubble) {
@@ -156,11 +181,11 @@ export default function Tools() {
         }
       });
     }
-  }, []);
+  };
 
   return (
     <Section id="tools" title="Tools">
-      <div className="relative -mt-40 overflow-x-hidden">
+      <div className="relative lg:-mt-40 overflow-x-hidden" ref={sectionRef}>
         {/* Hands Container for larger screens */}
         <div className="hidden lg:flex relative h-[600px] justify-center">
           <div className="absolute left-0 -ml-16">
@@ -269,7 +294,7 @@ export default function Tools() {
 
         {/* Tools Container for smaller screens */}
         <div className="lg:hidden flex justify-center items-center h-screen">
-          <div className="grid grid-cols-4 gap-2">
+          <div className="grid grid-cols-4 gap-4">
             {[
               ["node", "mongodb", "express"],
               ["aws", "rest", "jwt", "postman"],
@@ -287,9 +312,9 @@ export default function Tools() {
                     key={i}
                     src={`/${logo}.svg`}
                     alt={`${logo} logo`}
-                    width={60}
-                    height={60}
-                    className="mb-2"
+                    width={80}
+                    height={80}
+                    className="mb-4"
                   />
                 ))}
               </div>
