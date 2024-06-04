@@ -8,7 +8,7 @@ import styles from "./Eyes.module.css";
 export default function Hero() {
   return (
     <Section id="hero">
-      <div className="text-center relative">
+      <div className="text-center -mt-8 relative">
         <div className="inline-block">
           <Image
             src="/avatar.svg"

@@ -12,6 +12,9 @@ module.exports = {
         "custom-paragraph": ["Poppins", "sans-serif"],
         "custom-extra": ["Bubblegum Sans", "sans-serif"],
       },
+      fontSize: {
+        "sm-custom": "14px",
+      },
       colors: {
         "dark-blue": "#101E60",
         "main-pink": "#FF48B0",
