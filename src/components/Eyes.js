@@ -56,7 +56,7 @@ const Eyes = () => {
           objectFit="cover"
         />
         <div
-          className={`${styles.pupil} ${styles["left-pupil"]}`}
+          className={`${styles.pupil} ${styles.leftPupil}`}
           ref={leftPupilRef}
         >
           <Image
@@ -75,7 +75,7 @@ const Eyes = () => {
           objectFit="cover"
         />
         <div
-          className={`${styles.pupil} ${styles["right-pupil"]}`}
+          className={`${styles.pupil} ${styles.rightPupil}`}
           ref={rightPupilRef}
         >
           <Image

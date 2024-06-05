@@ -84,8 +84,6 @@ textarea {
 }
 
 /* Tools */
-
-/* Tools */
 .drop {
   position: absolute;
   top: -33px; /* Start above the dropper */
@@ -147,6 +145,17 @@ textarea {
     align-items: center;
   }
 }
+
+/* Avatar */
+
+@media (max-width: 450px) and (min-width: 375px) {
+  .avatar {
+    width: 300px;
+    height: auto;
+  }
+}
+
+/* Other */
 
 .group:hover .group-hover\:scale-x-100 {
   transform: scaleX(1);

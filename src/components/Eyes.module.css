@@ -32,3 +32,29 @@
   top: 34%;
   left: 31%;
 }
+
+@media (max-width: 450px) and (min-width: 300px) {
+  .eyes {
+    transform: translate(-41%, -165%);
+  }
+
+  .eye {
+    width: 42px;
+    height: 42px;
+  }
+
+  .pupil {
+    width: 14px;
+    height: 18px;
+  }
+
+  .left-pupil {
+    top: 34%;
+    left: 38%;
+  }
+
+  .right-pupil {
+    top: 34%;
+    left: 33%;
+  }
+}
