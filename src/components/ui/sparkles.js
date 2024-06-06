@@ -218,7 +218,7 @@ export const SparklesCore = (
                   mode: "delete",
                   value: 0,
                 },
-                value: particleDensity || 120,
+                value: particleDensity || 60,
               },
               opacity: {
                 value: {

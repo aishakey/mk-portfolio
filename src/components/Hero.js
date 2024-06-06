@@ -8,7 +8,7 @@ import styles from "./Eyes.module.css";
 
 const Hero = () => {
   return (
-    <div className="min-h-screen relative">
+    <div className="relative h-[600px]">
       <SparklesCore
         className="absolute w-full h-full inset-0 z-0"
         background="transparent"
@@ -17,23 +17,32 @@ const Hero = () => {
         particleDensity={100}
         particleColor="#9BF1FF"
       />
-      <div className="text-center relative z-10">
+      <div className="text-center mt-2 relative z-10 mb-10">
         <div className="inline-block">
           <Image
             src="/avatar.svg"
             alt="Hero Avatar"
             width={380}
             height={190}
-            className="avatar mx-auto mb-4"
+            className="avatar mx-auto"
           />
           <div className={styles.eyes}>
             <Eyes />
           </div>
         </div>
-        <h1 className="text-3xl font-semibold pb-4">
+        <h1 className="sm:text-3xl text-2xl font-semibold sm:pb-4 pb-2">
           Hi, my name is Maria Key
         </h1>
-        <h4 className="text-xl">And I am a creative full stack developer</h4>
+        <h4 className="sm:text-xl text-lg">
+          And I am a creative full stack developer
+        </h4>
+      </div>
+      <div className="flex justify-center">
+        <div className="arrow-wave">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </div>
   );

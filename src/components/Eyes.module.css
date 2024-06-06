@@ -2,7 +2,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-42%, -133%);
+  transform: translate(-42%, -120%);
   display: flex;
   gap: 3px;
 }
@@ -33,19 +33,45 @@
   left: 31%;
 }
 
-@media (max-width: 450px) and (min-width: 300px) {
+@media (max-width: 640px) and (min-width: 450px) {
   .eyes {
-    transform: translate(-41%, -165%);
+    transform: translate(-41%, -125%);
   }
 
   .eye {
-    width: 42px;
+    width: 56px;
     height: 42px;
   }
 
   .pupil {
-    width: 14px;
-    height: 18px;
+    width: 30px;
+    height: 22px;
+  }
+
+  .left-pupil {
+    top: 34%;
+    left: 38%;
+  }
+
+  .right-pupil {
+    top: 34%;
+    left: 33%;
+  }
+}
+
+@media (max-width: 450px) {
+  .eyes {
+    transform: translate(-42%, -129%);
+  }
+
+  .eye {
+    width: 45px;
+    height: 42px;
+  }
+
+  .pupil {
+    width: 15px;
+    height: 22px;
   }
 
   .left-pupil {
