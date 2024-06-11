@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { Link as ScrollLink } from "react-scroll";
+import NavLink from "./NavLink";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,6 +10,12 @@ export default function Navbar() {
   const handleLinkClick = () => {
     setIsOpen(false);
   };
+
+  const links = [
+    { to: "#projects", label: "Projects" },
+    { to: "#about", label: "About" },
+    { to: "#contact", label: "Contact" },
+  ];
 
   return (
     <nav className="py-8 px-10 flex justify-between items-center relative">
@@ -23,39 +29,11 @@ export default function Navbar() {
         />
       </div>
       <div className="hidden md:flex space-x-12 justify-center flex-1 text-center">
-        <ScrollLink
-          to="projects"
-          smooth={true}
-          duration={500}
-          offset={-70}
-          className="relative group text-dark-blue cursor-pointer"
-          onClick={handleLinkClick}
-        >
-          Projects
-          <span className="block absolute bottom-0 left-0 w-full h-0.5 bg-main-pink transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
-        </ScrollLink>
-        <ScrollLink
-          to="about"
-          smooth={true}
-          duration={500}
-          offset={-70}
-          className="relative group text-dark-blue cursor-pointer"
-          onClick={handleLinkClick}
-        >
-          About
-          <span className="block absolute bottom-0 left-0 w-full h-0.5 bg-main-pink transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
-        </ScrollLink>
-        <ScrollLink
-          to="contact"
-          smooth={true}
-          duration={500}
-          offset={-70}
-          className="relative group text-dark-blue cursor-pointer"
-          onClick={handleLinkClick}
-        >
-          Contact
-          <span className="block absolute bottom-0 left-0 w-full h-0.5 bg-main-pink transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
-        </ScrollLink>
+        {links.map((link) => (
+          <NavLink key={link.to} to={link.to} onClick={handleLinkClick}>
+            {link.label}
+          </NavLink>
+        ))}
       </div>
       <a
         href="/resume.pdf"
@@ -98,39 +76,11 @@ export default function Navbar() {
             />
           </button>
         </div>
-        <ScrollLink
-          to="projects"
-          smooth={true}
-          duration={500}
-          offset={-70}
-          className="relative group text-dark-blue cursor-pointer"
-          onClick={handleLinkClick}
-        >
-          Projects
-          <span className="block absolute bottom-0 left-0 w-full h-0.5 bg-main-pink transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
-        </ScrollLink>
-        <ScrollLink
-          to="about"
-          smooth={true}
-          duration={500}
-          offset={-70}
-          className="relative group text-dark-blue cursor-pointer"
-          onClick={handleLinkClick}
-        >
-          About
-          <span className="block absolute bottom-0 left-0 w-full h-0.5 bg-main-pink transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
-        </ScrollLink>
-        <ScrollLink
-          to="contact"
-          smooth={true}
-          duration={500}
-          offset={-70}
-          className="relative group text-dark-blue cursor-pointer"
-          onClick={handleLinkClick}
-        >
-          Contact
-          <span className="block absolute bottom-0 left-0 w-full h-0.5 bg-main-pink transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
-        </ScrollLink>
+        {links.map((link) => (
+          <NavLink key={link.to} to={link.to} onClick={handleLinkClick}>
+            {link.label}
+          </NavLink>
+        ))}
         <a
           href="/resume.pdf"
           target="_blank"

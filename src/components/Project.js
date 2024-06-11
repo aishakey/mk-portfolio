@@ -33,42 +33,42 @@ export default function Project({
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div className="flex justify-center w-full md:w-1/2">
+      <div className="flex justify-center w-full md:mr-28 md:w-1/2">
         <Image
           src={imageSrc}
           alt={name}
           className="rounded-md"
-          width={350}
-          height={350}
+          width={320}
+          height={320}
         />
       </div>
       <div className="flex flex-col items-center md:items-start w-full md:w-1/2 mt-4 md:mt-0 md:ml-16 text-center md:text-left">
         <div className="flex flex-col md:flex-row md:items-center">
-          <h2 className="text-2xl font-semibold font-custom-paragraph">
+          <h2 className="text-xl font-semibold font-custom-paragraph">
             {name}
           </h2>
           <button
             onClick={() => setShowDescription(!showDescription)}
-            className="hidden md:inline-block text-main-pink text-sm mt-1 md:mt-0 md:ml-4 underline"
+            className="hidden md:inline-block text-dark-blue font-light text-xs ml-4 -mb-1 underline"
           >
             Read more
           </button>
         </div>
         <h3 className="text-lg font-semibold mt-2">{subtitle}</h3>
-        <div className="flex mt-4 space-x-6 justify-center md:justify-start order-3 md:order-3">
+        <div className="flex mt-4 space-x-4 justify-center md:justify-start order-3 md:order-3">
           <a href={githubLink} target="_blank" rel="noopener noreferrer">
-            <Image src="/github_logo.svg" alt="GitHub" width={23} height={23} />
+            <Image src="/github_logo.svg" alt="GitHub" width={35} height={35} />
           </a>
           <a href={liveDemoLink} target="_blank" rel="noopener noreferrer">
-            <Image src="/demo.svg" alt="Live Demo" width={30} height={28} />
+            <Image src="/demo.svg" alt="Live Demo" width={35} height={35} />
           </a>
           {email && password && (
             <div className="relative flex items-center">
               <Image
                 src={hovered ? "/unlocked_password.svg" : "/password.svg"}
                 alt="Password"
-                width={25}
-                height={25}
+                width={35}
+                height={35}
                 className="transition duration-300 transform hover:scale-110"
               />
               {hovered && (

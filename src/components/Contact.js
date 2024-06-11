@@ -54,7 +54,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div>
+    <div id="contact">
       <header
         className="w-full h-40 bg-repeat-x bg-bottom relative"
         style={{
