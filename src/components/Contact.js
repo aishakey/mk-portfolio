@@ -2,20 +2,59 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import emailjs from "emailjs-com";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [focusedField, setFocusedField] = useState(null);
+  const [buttonText, setButtonText] = useState("Send");
+  const [buttonState, setButtonState] = useState("idle");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
+    setButtonState("sending");
+    setButtonText("Just a moment...");
+
+    const templateParams = {
+      name,
+      email,
+      message,
+    };
+
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+      )
+      .then(
+        (response) => {
+          setButtonState("success");
+          setButtonText("Message sent successfully!");
+          setName("");
+          setEmail("");
+          setMessage("");
+          setTimeout(() => {
+            setButtonState("idle");
+            setButtonText("Send");
+          }, 3000);
+        },
+        (error) => {
+          setButtonState("error");
+          setButtonText("Error occurred. Try again");
+          setTimeout(() => {
+            setButtonState("idle");
+            setButtonText("Send");
+          }, 3000);
+        }
+      );
   };
 
   return (
-    <div className="md:mt-10">
+    <div>
       <header
         className="w-full h-40 bg-repeat-x bg-bottom relative"
         style={{
@@ -26,8 +65,8 @@ export default function ContactForm() {
           <Image
             src="/phone.svg"
             alt="Phone"
-            width={28}
-            height={28}
+            width={24}
+            height={24}
             className="mr-3 transform -scale-x-100"
           />
           <h1 className="md:text-2xl text-xl text-center font-semibold">
@@ -36,8 +75,8 @@ export default function ContactForm() {
           <Image
             src="/phone.svg"
             alt="Phone"
-            width={28}
-            height={28}
+            width={24}
+            height={24}
             className="ml-3"
           />
         </div>
@@ -121,8 +160,19 @@ export default function ContactForm() {
               ></textarea>
             </div>
             <div className="flex justify-center w-full mt-8 mb-3">
-              <button className="w-11/12 md:w-11/12 p-2 bg-main-pink text-white text-sm rounded-2xl cursor-pointer hover:bg-[#ed4baa] transition-all">
-                Send
+              <button
+                className={`w-11/12 md:w-11/12 p-2 text-white text-sm rounded-2xl cursor-pointer transition-all ${
+                  buttonState === "sending"
+                    ? "bg-main-pink"
+                    : buttonState === "success"
+                    ? "bg-green-500"
+                    : buttonState === "error"
+                    ? "bg-red-500"
+                    : "bg-main-pink hover:bg-[#ed4baa]"
+                }`}
+                disabled={buttonState === "sending"}
+              >
+                {buttonText}
               </button>
             </div>
           </form>
