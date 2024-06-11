@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function Project({
@@ -15,117 +15,89 @@ export default function Project({
 }) {
   const [hovered, setHovered] = useState(false);
   const [showDescription, setShowDescription] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
-  const toggleDescription = () => {
-    setShowDescription(!showDescription);
-  };
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div
-      className="flex justify-center items-center"
+      className="flex flex-col md:flex-row justify-center items-center md:items-start p-4 -mt-6 md:mt-0 md:p-8 w-full max-w-4xl mx-auto"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div className="flex flex-col md:flex-row mb-16 p-4 gap-24 w-full md:w-2/3 relative group">
-        <div className="relative w-full md:w-1/2 flex justify-center items-center">
-          <div className="relative w-4/5">
-            <Image
-              src={imageSrc}
-              alt={name}
-              className="w-full transition duration-300 md:group-hover:opacity-30"
-              width={300}
-              height={300}
-            />
-            <button
-              onClick={toggleDescription}
-              className="hidden md:flex absolute inset-0 items-center justify-center text-white bg-main-pink shadow-sm h-10 w-24 rounded-xl font-medium text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              style={{
-                top: "46%",
-                left: "51%",
-                transform: "translate(-50%, -50%)",
-              }}
-            >
-              About
-            </button>
-          </div>
-        </div>
-        <div className="w-full md:w-1/2 flex flex-col justify-start">
-          <h2 className="font-custom-paragraph font-semibold text-xl mb-1">
+      <div className="flex justify-center w-full md:w-1/2">
+        <Image
+          src={imageSrc}
+          alt={name}
+          className="rounded-md"
+          width={350}
+          height={350}
+        />
+      </div>
+      <div className="flex flex-col items-center md:items-start w-full md:w-1/2 mt-4 md:mt-0 md:ml-16 text-center md:text-left">
+        <div className="flex flex-col md:flex-row md:items-center">
+          <h2 className="text-2xl font-semibold font-custom-paragraph">
             {name}
           </h2>
-          <h3 className="text-base mb-4">{subtitle}</h3>
-          <div className="flex items-center gap-1">
-            <a
-              href={githubLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mr-4"
-            >
+          <button
+            onClick={() => setShowDescription(!showDescription)}
+            className="hidden md:inline-block text-main-pink text-sm mt-1 md:mt-0 md:ml-4 underline"
+          >
+            Read more
+          </button>
+        </div>
+        <h3 className="text-lg font-semibold mt-2">{subtitle}</h3>
+        <div className="flex mt-4 space-x-6 justify-center md:justify-start order-3 md:order-3">
+          <a href={githubLink} target="_blank" rel="noopener noreferrer">
+            <Image src="/github_logo.svg" alt="GitHub" width={23} height={23} />
+          </a>
+          <a href={liveDemoLink} target="_blank" rel="noopener noreferrer">
+            <Image src="/demo.svg" alt="Live Demo" width={30} height={28} />
+          </a>
+          {email && password && (
+            <div className="relative flex items-center">
               <Image
-                src="/github_logo.svg"
-                alt="GitHub"
-                width={23}
-                height={23}
+                src={hovered ? "/unlocked_password.svg" : "/password.svg"}
+                alt="Password"
+                width={25}
+                height={25}
+                className="transition duration-300 transform hover:scale-110"
               />
-            </a>
-            <a
-              href={liveDemoLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mr-4"
-            >
-              <Image src="/demo.svg" alt="Live Demo" width={30} height={28} />
-            </a>
-            {email && password && (
-              <div className="relative flex items-center">
-                <Image
-                  src={hovered ? "/unlocked_password.svg" : "/password.svg"}
-                  alt="Password"
-                  width={25}
-                  height={25}
-                  className="transition duration-300 transform hover:scale-110"
-                />
-                {hovered && (
-                  <div className="absolute top-0 left-8 flex flex-col gap-2 ml-2">
-                    <div className="bg-white p-2 border-2 border-dark-blue rounded-xl shadow-md flex flex-col items-start">
-                      <div className="flex items-center">
-                        <span className="text-dark-blue text-xs font-bold mr-1">
-                          Email:
-                        </span>
-                        <span className="text-dark-blue text-xs">{email}</span>
-                      </div>
-                      <div className="flex items-center mt-1">
-                        <span className="text-dark-blue text-xs font-bold mr-1">
-                          Password:
-                        </span>
-                        <span className="text-dark-blue text-xs">
-                          {password}
-                        </span>
-                      </div>
+              {hovered && (
+                <div className="absolute top-0 left-8 flex flex-col gap-2 ml-2">
+                  <div className="bg-white p-2 border-2 border-dark-blue rounded-xl shadow-md flex flex-col items-start">
+                    <div className="flex items-center">
+                      <span className="text-dark-blue text-xs font-bold mr-1">
+                        Email:
+                      </span>
+                      <span className="text-dark-blue text-xs">{email}</span>
+                    </div>
+                    <div className="flex items-center mt-1">
+                      <span className="text-dark-blue text-xs font-bold mr-1">
+                        Password:
+                      </span>
+                      <span className="text-dark-blue text-xs">{password}</span>
                     </div>
                   </div>
-                )}
-              </div>
-            )}
-          </div>
-          <p className="text-lg mt-4 block md:hidden">{description}</p>
+                </div>
+              )}
+            </div>
+          )}
         </div>
+        {(showDescription || isMobile) && (
+          <p className="text-base md:text-lg px-8 md:px-0 mb-8 md:mb-0 text-dark-blue font-normal md:font-medium mt-6 order-4 md:order-2">
+            {description}
+          </p>
+        )}
       </div>
-
-      {showDescription && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white p-8 rounded-lg shadow-lg w-3/4 md:w-1/2 relative">
-            <button
-              onClick={toggleDescription}
-              className="absolute top-4 right-4 text-xl text-gray-700"
-            >
-              x
-            </button>
-            <h2 className="font-semibold text-2xl mb-4">Description</h2>
-            <p className="text-lg">{description}</p>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

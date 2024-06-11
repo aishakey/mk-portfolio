@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Section from "./Section";
@@ -185,7 +186,10 @@ export default function Tools() {
 
   return (
     <Section id="tools" title="Tools">
-      <div className="relative lg:-mt-40 overflow-x-hidden" ref={sectionRef}>
+      <div
+        className="relative mb-16 lg:mb-0 lg:-mt-40 overflow-x-hidden"
+        ref={sectionRef}
+      >
         {/* Hands Container for larger screens */}
         <div className="hidden lg:flex relative h-[600px] justify-center">
           <div className="absolute left-0 -ml-16">
@@ -293,7 +297,7 @@ export default function Tools() {
         </div>
 
         {/* Tools Container for smaller screens */}
-        <div className="lg:hidden flex justify-center items-center h-screen">
+        <div className="lg:hidden flex justify-center items-center">
           <div className="grid grid-cols-4 gap-4">
             {[
               ["node", "mongodb", "express"],
@@ -312,8 +316,8 @@ export default function Tools() {
                     key={i}
                     src={`/${logo}.svg`}
                     alt={`${logo} logo`}
-                    width={80}
-                    height={80}
+                    width={75}
+                    height={75}
                     className="mb-4"
                   />
                 ))}

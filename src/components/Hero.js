@@ -1,4 +1,3 @@
-// components/Hero.js
 "use client";
 import React from "react";
 import Image from "next/image";
@@ -8,7 +7,7 @@ import styles from "./Eyes.module.css";
 
 const Hero = () => {
   return (
-    <div className="relative h-[600px]">
+    <div className="relative min-h-screen md:min-h-[600px] md:mt-0">
       <SparklesCore
         className="absolute w-full h-full inset-0 z-0"
         background="transparent"
@@ -17,7 +16,7 @@ const Hero = () => {
         particleDensity={100}
         particleColor="#9BF1FF"
       />
-      <div className="text-center mt-2 relative z-10 mb-10">
+      <div className="text-center relative z-10 mb-10">
         <div className="inline-block">
           <Image
             src="/avatar.svg"
@@ -37,7 +36,7 @@ const Hero = () => {
           And I am a creative full stack developer
         </h4>
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center md:mt-8">
         <div className="arrow-wave">
           <span></span>
           <span></span>

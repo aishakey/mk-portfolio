@@ -43,7 +43,7 @@ export default function About() {
 
   return (
     <Section id="about" title="My Story">
-      <ul className="stack-cards js-stack-cards">
+      <ul className="stack-cards js-stack-cards -mt-4 md:mt-0">
         <li className="stack-cards__item js-stack-cards__item relative bg-[#C5F7FF] border-4 border-[#02A3DC] rounded-xl p-4 mb-6 mx-4 lg:mx-44 md:mx-24 h-auto lg:py-12 flex flex-col md:flex-row items-center justify-center overflow-hidden">
           <Image
             src="/blob1_1.svg"
@@ -110,7 +110,7 @@ export default function About() {
               alt="Chemistry Avatar"
               width={150}
               height={75}
-              className="w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 xl:w-52 xl:h-52"
+              className="w-[130px] h-[130px] md:w-36 md:h-36 lg:w-40 lg:h-40 xl:w-52 xl:h-52"
             />
           </div>
           <div className="w-full md:w-2/3 h-auto flex flex-col justify-center text-center md:text-left order-2">
@@ -157,7 +157,7 @@ export default function About() {
               alt="Tennis Avatar"
               width={150}
               height={75}
-              className="w-28 h-28 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56"
+              className="ml-6 w-[140px] h-[140px] md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56"
             />
           </div>
           <div className="w-full md:w-2/3 h-auto flex flex-col justify-center text-center md:text-left order-2">
