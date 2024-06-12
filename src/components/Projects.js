@@ -30,8 +30,8 @@ export default function Projects() {
       imageSrc: "/memory_sack.svg",
       name: "Memory Sack",
       subtitle: "Sharpen Your Memory with Fun",
-      githubLink: "https://github.com/projectthree",
-      liveDemoLink: "https://projectthree.com",
+      githubLink: "https://github.com/aishakey/memory-sack-game",
+      liveDemoLink: "https://memory-sack-game.vercel.app/",
       email: null,
       password: null,
       description:

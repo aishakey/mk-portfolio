@@ -49,7 +49,7 @@ export default function Project({
           </h2>
           <button
             onClick={() => setShowDescription(!showDescription)}
-            className="hidden md:inline-block text-dark-blue font-light text-xs ml-4 -mb-1 underline"
+            className="hidden md:inline-block text-dark-blue font-normal text-xs ml-4 -mb-1 underline"
           >
             Read more
           </button>
@@ -57,10 +57,22 @@ export default function Project({
         <h3 className="text-lg font-semibold mt-2">{subtitle}</h3>
         <div className="flex mt-4 space-x-4 justify-center md:justify-start order-3 md:order-3">
           <a href={githubLink} target="_blank" rel="noopener noreferrer">
-            <Image src="/github_logo.svg" alt="GitHub" width={35} height={35} />
+            <Image
+              src="/github_logo.svg"
+              alt="GitHub"
+              className="transition duration-300 transform hover:scale-110"
+              width={35}
+              height={35}
+            />
           </a>
           <a href={liveDemoLink} target="_blank" rel="noopener noreferrer">
-            <Image src="/demo.svg" alt="Live Demo" width={35} height={35} />
+            <Image
+              src="/demo.svg"
+              alt="Live Demo"
+              className="transition duration-300 transform hover:scale-110"
+              width={35}
+              height={35}
+            />
           </a>
           {email && password && (
             <div className="relative flex items-center">
@@ -69,7 +81,6 @@ export default function Project({
                 alt="Password"
                 width={35}
                 height={35}
-                className="transition duration-300 transform hover:scale-110"
               />
               {hovered && (
                 <div className="absolute top-0 left-8 flex flex-col gap-2 ml-2">
@@ -93,7 +104,7 @@ export default function Project({
           )}
         </div>
         {(showDescription || isMobile) && (
-          <p className="text-base md:text-lg px-8 md:px-0 mb-8 md:mb-0 text-dark-blue font-normal md:font-medium mt-6 order-4 md:order-2">
+          <p className="text-base md:text-sm px-8 md:px-0 mb-8 md:mb-0 text-dark-blue font-normal mt-6 md:mt-2 order-4 md:order-2">
             {description}
           </p>
         )}
