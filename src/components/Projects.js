@@ -41,7 +41,7 @@ export default function Projects() {
 
   return (
     <Section id="projects" title="Projects">
-      <div className="flex flex-col justify-center items-center md:gap-10">
+      <div className="flex flex-col justify-center items-center gap-10">
         {projectData.map((project, index) => (
           <Project key={index} {...project} />
         ))}

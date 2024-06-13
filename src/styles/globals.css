@@ -83,10 +83,12 @@ textarea {
   border-image-slice: 1;
 }
 
+/* Hero Animation */
+
 /* Tools */
 .drop {
   position: absolute;
-  top: -33px; /* Start above the dropper */
+  top: -33px;
   z-index: 1;
 }
 
@@ -159,6 +161,10 @@ textarea {
 
 .group:hover .group-hover\:scale-x-100 {
   transform: scaleX(1);
+}
+
+.transition-max-height {
+  transition: max-height 0.5s ease-in-out;
 }
 
 /* Scroll Down Arrow */
@@ -261,4 +267,23 @@ textarea:focus {
   border: solid 3px #ff48b0;
 }
 
-/* Animation */
+/* Animation Reveal */
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.7s ease-in-out forwards;
+}
+
+.transition-max-height {
+  transition: max-height 0.5s ease-in-out;
+}
