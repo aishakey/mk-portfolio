@@ -42,7 +42,28 @@ export default function About() {
   }, []);
 
   return (
-    <Section id="about" title="My Story">
+    <Section id="about">
+      <div className="flex items-center justify-center mb-12">
+        <Image
+          src="/flower1.svg"
+          alt="Flower"
+          width={25}
+          height={25}
+          className="mr-2"
+        />
+
+        <h2 className="md:text-2xl text-xl text-center font-semibold">
+          My Story
+        </h2>
+
+        <Image
+          src="/flower1.svg"
+          alt="Flower"
+          width={25}
+          height={25}
+          className="ml-2"
+        />
+      </div>
       <ul className="stack-cards js-stack-cards -mt-4 md:mt-0">
         <li className="stack-cards__item js-stack-cards__item relative bg-[#C5F7FF] border-4 border-[#02A3DC] rounded-xl p-4 mb-6 mx-4 lg:mx-44 md:mx-24 h-auto lg:py-12 flex flex-col md:flex-row items-center justify-center overflow-hidden">
           <Image

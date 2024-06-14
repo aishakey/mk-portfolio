@@ -196,9 +196,9 @@ export default function Tools() {
   };
 
   return (
-    <Section id="tools" title="Tools">
+    <Section id="tools" title="Tools" flowers="true">
       <div
-        className="relative mb-16 lg:mb-0 lg:-mt-40 overflow-x-hidden"
+        className="relative -mb-4 lg:mb-0 lg:-mt-40 overflow--hidden"
         ref={sectionRef}
       >
         {/* Steam effect for larger screens */}

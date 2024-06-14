@@ -44,6 +44,12 @@ textarea {
   resize: none;
 }
 
+/* Navbar */
+
+.resume-link {
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
 /* Stacking Cards */
 
 .stack-cards {

@@ -38,7 +38,7 @@ export default function Navbar() {
       <a
         href="/resume.pdf"
         target="_blank"
-        className="hidden md:block text-main-pink border-2 border-main-pink rounded-2xl px-4 py-1"
+        className="hidden resume-link md:block text-main-pink border-2 border-main-pink rounded-2xl px-4 py-1 hover:text-[#46BCE8] hover:border-[#46BCE8]"
       >
         Resume
       </a>

@@ -40,8 +40,8 @@ export default function Projects() {
   ];
 
   return (
-    <Section id="projects" title="Projects">
-      <div className="flex flex-col justify-center items-center gap-10">
+    <Section id="projects" title="Projects" flowers="true">
+      <div className="flex flex-col md:mb-20 md:-mt-4 justify-center items-center gap-10">
         {projectData.map((project, index) => (
           <Project key={index} {...project} />
         ))}

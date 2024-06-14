@@ -98,7 +98,7 @@ export default function ContactForm() {
             >
               <label
                 htmlFor="name"
-                className="text-main-pink text-base block mt-3 w-7/12 -ml-4 md:-ml-16 text-left"
+                className="text-main-pink text-base block mt-3 w-7/12 ml-4 md:-ml-6 text-left"
               >
                 Your name
               </label>
@@ -121,7 +121,7 @@ export default function ContactForm() {
             >
               <label
                 htmlFor="email"
-                className="text-main-pink text-base block mt-3 w-7/12 -ml-4 md:-ml-16 text-left"
+                className="text-main-pink text-base block mt-3 w-7/12 ml-4 md:-ml-6 text-left"
               >
                 Your e-mail
               </label>
@@ -144,7 +144,7 @@ export default function ContactForm() {
             >
               <label
                 htmlFor="message"
-                className="text-main-pink text-base block mt-3 -ml-4 md:-ml-16 w-7/12 text-left"
+                className="text-main-pink text-base block mt-3 ml-4 md:-ml-6 w-7/12 text-left"
               >
                 Your message
               </label>
