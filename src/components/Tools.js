@@ -1,12 +1,23 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Section from "./Section";
 import { gsap } from "gsap";
 
 export default function Tools() {
   const sectionRef = useRef(null);
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth >= 1024);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -190,6 +201,31 @@ export default function Tools() {
         className="relative mb-16 lg:mb-0 lg:-mt-40 overflow-x-hidden"
         ref={sectionRef}
       >
+        {/* Steam effect for larger screens */}
+        {isLargeScreen && (
+          <div className="steam-container">
+            <div
+              id="steam"
+              style={{
+                top: "-480px",
+                left: "50%",
+                transform: "translateX(-50%)",
+              }}
+            >
+              <div id="anima1">
+                <span style={{ "--i": ".5" }}></span>
+                <span style={{ "--i": ".3" }}></span>
+                <span style={{ "--i": "1.5" }}></span>
+                <span style={{ "--i": "2.5" }}></span>
+                <span style={{ "--i": ".1" }}></span>
+                <span style={{ "--i": ".1" }}></span>
+                <span style={{ "--i": "1.5" }}></span>
+                <span style={{ "--i": "1" }}></span>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Hands Container for larger screens */}
         <div className="hidden lg:flex relative h-[600px] justify-center">
           <div className="absolute left-0 -ml-16">
@@ -198,6 +234,7 @@ export default function Tools() {
               alt="Left Hand"
               width={540}
               height={540}
+              className="hand-image"
             />
           </div>
           <div className="absolute right-0 -mr-16">
@@ -206,6 +243,7 @@ export default function Tools() {
               alt="Right Hand"
               width={540}
               height={540}
+              className="hand-image"
             />
           </div>
         </div>
@@ -255,6 +293,27 @@ export default function Tools() {
                 }}
               ></div>
             ))}
+            {isLargeScreen && (
+              <div
+                id="steam"
+                style={{
+                  top: "-210px",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                }}
+              >
+                <div id="anima1">
+                  <span style={{ "--i": ".5" }}></span>
+                  <span style={{ "--i": ".3" }}></span>
+                  <span style={{ "--i": "1.5" }}></span>
+                  <span style={{ "--i": "2.5" }}></span>
+                  <span style={{ "--i": ".1" }}></span>
+                  <span style={{ "--i": ".1" }}></span>
+                  <span style={{ "--i": "1.5" }}></span>
+                  <span style={{ "--i": "1" }}></span>
+                </div>
+              </div>
+            )}
           </div>
           <div id="rightFlask" className="relative">
             <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 fill-container">
@@ -293,6 +352,27 @@ export default function Tools() {
                 }}
               ></div>
             ))}
+            {isLargeScreen && (
+              <div
+                id="steam"
+                style={{
+                  top: "-210px",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                }}
+              >
+                <div id="anima1">
+                  <span style={{ "--i": ".5" }}></span>
+                  <span style={{ "--i": ".3" }}></span>
+                  <span style={{ "--i": "1.5" }}></span>
+                  <span style={{ "--i": "2.5" }}></span>
+                  <span style={{ "--i": ".1" }}></span>
+                  <span style={{ "--i": ".1" }}></span>
+                  <span style={{ "--i": "1.5" }}></span>
+                  <span style={{ "--i": "1" }}></span>
+                </div>
+              </div>
+            )}
           </div>
         </div>
 

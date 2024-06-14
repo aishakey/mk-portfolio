@@ -65,8 +65,8 @@ export default function ContactForm() {
           <Image
             src="/phone.svg"
             alt="Phone"
-            width={24}
-            height={24}
+            width={26}
+            height={26}
             className="mr-3 transform -scale-x-100"
           />
           <h1 className="md:text-2xl text-xl text-center font-semibold">

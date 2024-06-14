@@ -159,12 +159,35 @@ textarea {
 
 /* Other */
 
-.group:hover .group-hover\:scale-x-100 {
-  transform: scaleX(1);
+/* styles.css or global.css */
+.transition-max-height {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
-.transition-max-height {
-  transition: max-height 0.5s ease-in-out;
+.transition-max-height-expanded {
+  max-height: 500px; /* Adjust based on your content's height */
+  opacity: 1;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 /* Scroll Down Arrow */
@@ -237,13 +260,73 @@ textarea {
   }
 }
 
-/* Contact Form */
+/* Tools Steam */
 
-header {
-  height: 160px;
-  background: url("http://www.geertjanhendriks.nl/codepen/form/golf.png")
-    repeat-x bottom;
+#steam {
+  width: 320px;
+  height: 480px;
+  position: absolute;
+  justify-content: center;
+  z-index: 1;
 }
+
+#anima1 {
+  display: flex;
+  justify-content: center;
+  width: 280px;
+  position: absolute;
+}
+
+#anima1 span {
+  position: relative;
+  bottom: -120px;
+  margin: 0 2px 50px;
+  min-width: 8px;
+  height: 120px;
+  background: rgb(250, 202, 252);
+  border-radius: 50%;
+  animation: animate 3s linear infinite;
+  opacity: 0;
+  filter: blur(8px);
+  animation-delay: calc(var(--i) * 1s);
+}
+
+.flask-image {
+  position: relative;
+  z-index: 2;
+}
+
+.hand-image {
+  position: relative;
+  z-index: 3;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) scaleX(1);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-75px) scaleX(5);
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-150px) scaleX(10);
+  }
+}
+
+@media (max-width: 1024px) {
+  #steam {
+    display: none;
+  }
+}
+
+/* Contact Form */
 
 #form {
   background-color: #ffebef;

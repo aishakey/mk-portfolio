@@ -157,7 +157,7 @@ export default function About() {
               alt="Tennis Avatar"
               width={150}
               height={75}
-              className="ml-6 w-[140px] h-[140px] md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56"
+              className="ml-6 md:-ml-2 w-[140px] h-[140px] md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56"
             />
           </div>
           <div className="w-full md:w-2/3 h-auto flex flex-col justify-center text-center md:text-left order-2">

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import { CSSTransition, SwitchTransition } from "react-transition-group";
 
 export default function Project({
   imageSrc,
@@ -72,11 +73,19 @@ export default function Project({
               onClick={() => setShowDescription(!showDescription)}
               className="hidden md:inline-block text-dark-blue font-normal text-xs ml-4 -mb-1 underline"
             >
-              {showDescription ? "Hide" : "Read more"}
+              <SwitchTransition mode="out-in">
+                <CSSTransition
+                  key={showDescription}
+                  classNames="fade"
+                  timeout={500}
+                >
+                  <span>{showDescription ? "Hide" : "Read more"}</span>
+                </CSSTransition>
+              </SwitchTransition>
             </button>
           </div>
           <h3 className="text-lg font-semibold mt-2">{subtitle}</h3>
-          <div className="flex -mt-3 md:mt-3 space-x-4 justify-center md:justify-start order-3">
+          <div className="flex mt-4 space-x-4 justify-center md:justify-start">
             <a href={githubLink} target="_blank" rel="noopener noreferrer">
               <Image
                 src="/github_logo.svg"
@@ -127,11 +136,13 @@ export default function Project({
             )}
           </div>
           <div
-            className={`${
-              showDescription || isMobile ? "max-h-screen" : "max-h-0"
-            } transition-max-height duration-500 overflow-hidden`}
+            className={`transition-max-height ${
+              showDescription || isMobile
+                ? "transition-max-height-expanded"
+                : ""
+            }`}
           >
-            <p className="text-base md:text-sm px-8 md:px-0 mb-8 md:mb-0 text-dark-blue font-normal mt-4 md:mt-2 order-4 md:order-2">
+            <p className="text-base md:text-sm px-8 md:px-0 mb-8 md:mb-0 text-dark-blue font-normal mt-6 md:mt-4 order-4 md:order-2">
               {description}
             </p>
           </div>
