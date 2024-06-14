@@ -7,8 +7,8 @@ export default function Projects() {
       imageSrc: "/bean.svg",
       name: "Bean",
       subtitle: "Discover & Review Coffee Shops Worldwide",
-      githubLink: "https://github.com/projectone",
-      liveDemoLink: "https://projectone.com",
+      githubLink: "https://github.com/aishakey/bean-coffee",
+      liveDemoLink: "https://bean-coffeeshop-finder.netlify.app/",
       email: "bean@example.com",
       password: "bean123",
       description:
@@ -18,8 +18,8 @@ export default function Projects() {
       imageSrc: "/fridge.svg",
       name: "Fridge",
       subtitle: "Personalized Online Invites & Cards",
-      githubLink: "https://github.com/projecttwo",
-      liveDemoLink: "https://projecttwo.com",
+      githubLink: "https://github.com/aishakey/fridge-card-sharing-platform",
+      liveDemoLink: "fridge-card-sharing-platform.vercel.app",
       email: "fridge@example.com",
       password: "fridge123",
 
