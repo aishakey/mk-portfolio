@@ -9,8 +9,8 @@ export default function Projects() {
       subtitle: "Discover & Review Coffee Shops Worldwide",
       githubLink: "https://github.com/aishakey/bean-coffee",
       liveDemoLink: "https://bean-coffeeshop-finder.netlify.app/",
-      email: "bean@example.com",
-      password: "bean123",
+      email: "user@example.com",
+      password: "User123!",
       description:
         "Bean is the ultimate full-stack coffee shop locator, built using the MERN stack with secure image storage in S3 buckets. Dive into the world of coffee with user-generated reviews and discover new favorites using advanced filters. Featuring JWT for secure authentication and crafted with minimalist CSS, this platform offers an intuitive and sleek user experience for coffee enthusiasts everywhere.",
     },
@@ -20,8 +20,8 @@ export default function Projects() {
       subtitle: "Personalized Online Invites & Cards",
       githubLink: "https://github.com/aishakey/fridge-card-sharing-platform",
       liveDemoLink: "fridge-card-sharing-platform.vercel.app",
-      email: "fridge@example.com",
-      password: "fridge123",
+      email: "user@example.com",
+      password: "User123!",
 
       description:
         "Fridge transforms how you create and share special memories. Utilizing Next.js and Tailwind, this full-stack application allows users to send unique digital cards, mimicking the cherished tradition of displaying personal mementos on a fridge. With OAuth integration, including Google authentication, and all illustrations crafted in vibrant vector graphics, Fridge offers a playful yet personal way to stay connected.",
