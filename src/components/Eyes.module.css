@@ -35,7 +35,7 @@
 
 @media (max-width: 640px) and (min-width: 450px) {
   .eyes {
-    transform: translate(-41%, -125%);
+    transform: translate(-42%, -125%);
   }
 
   .eye {

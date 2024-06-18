@@ -23,16 +23,16 @@ const Hero = () => {
             alt="Hero Avatar"
             width={380}
             height={190}
-            className="avatar mx-auto"
+            className="avatar mx-auto bounceInAnimation"
           />
-          <div className={styles.eyes}>
+          <div className={`${styles.eyes} bounceInAnimation`}>
             <Eyes />
           </div>
         </div>
-        <h1 className="sm:text-3xl text-2xl font-semibold sm:pb-4 pb-2">
+        <h1 className="sm:text-3xl text-2xl font-semibold sm:pb-4 pb-2 fadeInAnimation">
           Hi, my name is Maria Key
         </h1>
-        <h4 className="sm:text-xl text-lg">
+        <h4 className="sm:text-xl text-lg fadeInAnimation">
           And I am a creative full stack developer
         </h4>
       </div>
