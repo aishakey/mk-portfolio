@@ -377,7 +377,7 @@ export default function Tools() {
         </div>
 
         {/* Tools Container for smaller screens */}
-        <div className="lg:hidden flex justify-center items-center">
+        <div className="lg:hidden flex justify-center items-center px-4">
           <div className="grid grid-cols-4 gap-4">
             {[
               ["node", "mongodb", "express"],
