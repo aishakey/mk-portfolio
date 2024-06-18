@@ -198,7 +198,6 @@ textarea {
 
 /* Other */
 
-/* styles.css or global.css */
 .transition-max-height {
   max-height: 0;
   overflow: hidden;
@@ -207,7 +206,7 @@ textarea {
 }
 
 .transition-max-height-expanded {
-  max-height: 500px; /* Adjust based on your content's height */
+  max-height: 500px;
   opacity: 1;
 }
 
