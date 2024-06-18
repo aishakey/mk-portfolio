@@ -36,7 +36,7 @@ export default function Navbar() {
         ))}
       </div>
       <a
-        href="/resume.pdf"
+        href="/Maria-Key-Resume.pdf"
         target="_blank"
         className="hidden resume-link md:block text-main-pink border-2 border-main-pink rounded-2xl px-4 py-1 hover:text-[#46BCE8] hover:border-[#46BCE8]"
       >
