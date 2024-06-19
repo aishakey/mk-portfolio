@@ -1,11 +1,11 @@
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=venom&color=0:FFC0CB,100:FF69B4&height=200&section=header&text=Welcome%20to%20Maria%20Key's%20Developer%20Portfolio&fontSize=40&fontAlignY=40&fontAlign=50&fontColor=FF69B4" alt="header"/>
+<p align="center" style="margin-top: 30px;">
+  <img src="https://capsule-render.vercel.app/api?type=venom&color=0:FFC0CB,100:9BF1FF&height=200&section=header&text=Welcome%20to%20Maria%20Key's%20Developer%20Portfolio&fontSize=40&fontAlignY=40&fontAlign=50&fontColor=FF69B4" alt="header"/>
 </p>
-<br><br><br>
+<br><br>
 <h2 align="center" style="font-size: 30px;">🌸 About Me 🌸</h2>
 
 <p align="left">I am a passionate Full Stack Developer with experience in building web applications using various technologies. This portfolio showcases some of my best work.</p>
-
+<br><br>
 <h2 align="center" style="font-size: 30px;">✨ Technologies & Tools ✨</h2>
 
 <p align="center">
@@ -21,11 +21,11 @@
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
   <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white"/>
 </p>
-
+<br><br>
 <h2 align="center" style="font-size: 30px;">👩🏼‍💻 Deployment 👩🏼‍💻</h2>
 
 <p align="left">Portfolio Link: [ Deployment Link Here]</p>
-
+<br><br>
 <h2 align="center" style="font-size: 30px;">📁 Projects 📁</h2>
 
 <h3 align="center" style="font-size: 24px;">☕ Project 1: Bean - Coffee Shop Locator and Reviewer ☕</h3>
@@ -57,7 +57,7 @@ Memory Sack is a front-end memory game where users have to test their memory by 
 <p align="center">
   <a href="https://memory-sack-game.vercel.app/">Live Demo</a>
 </p>
-
+<br><br>
 <h2 align="center" style="font-size: 30px;">🛠️ Installation & Setup 🛠️</h2>
 
 <p align="left">To run the portfolio project locally, follow these steps:</p>
@@ -75,18 +75,20 @@ Memory Sack is a front-end memory game where users have to test their memory by 
    npm install
    ```
 4. Start the development server
+
    ```bash
    npm run dev
    ```
 
-<h2 align="center" style="font-size: 30px;">💌 Contact 💌</h2>
-<p align="left">
-For any inquiries, please reach out to me at:
-<ul>
-  <li>Email: mariiyakey@gmail.com</li>
-  <li>LinkedIn: <a href="https://www.linkedin.com/in/mariia-key/">https://www.linkedin.com/in/mariia-key/</a></li>
-</ul>
-</p>
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer"/>
-</p>
+   <br><br>
+   <h2 align="center" style="font-size: 30px;">💌 Contact 💌</h2>
+   <p align="left">
+   For any inquiries, please reach out to me at:
+   <ul>
+     <li>Email: mariiyakey@gmail.com</li>
+     <li>LinkedIn: <a href="https://www.linkedin.com/in/mariia-key/">https://www.linkedin.com/in/mariia-key/</a></li>
+   </ul>
+   </p>
+   <p align="center">
+    <img src="https://capsule-render.vercel.app/api?type=waving&color=0:FFC0CB,100:FF69B4&height=100&section=footer"/>
+   </p>
