@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Full Stack Developer Portfolio
 
-## Getting Started
+![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Full%20Stack%20Developer%20Portfolio&fontSize=50&fontAlignY=40&fontAlign=70)
 
-First, run the development server:
+## 🚀 About Me
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+I am a passionate Full Stack Developer with experience in building web applications using various technologies. This portfolio showcases some of my best work.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Technologies & Tools
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🌐 Deployment
 
-## Learn More
+Portfolio Link: [ Deployment Link Here]
 
-To learn more about Next.js, take a look at the following resources:
+## 📁 Projects
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Project 1: Bean - Coffee Shop Locator and Reviewer
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+A full-stack project called Bean, it is a coffee shop locator and reviewer. Users can log in, leave reviews, and search for user-reviewed coffee shops around the world.
 
-## Deploy on Vercel
+- [Live Demo](https://bean-coffeeshop-finder.netlify.app/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![header](https://capsule-render.vercel.app/api?type=soft&color=gradient&text=Bean%20-%20Coffee%20Shop%20Locator%20and%20Reviewer&fontSize=30&fontAlignY=40&fontAlign=70)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Project 2: Fridge - Card Sharing Platform
+
+Fridge is a full-stack application used for sending cards to friends, receiving cards, and displaying them on a personal virtual fridge, mimicking the real card displaying on the fridge experience.
+
+- [Live Demo](https://fridge-card-sharing-platform.vercel.app/)
+
+![header](https://capsule-render.vercel.app/api?type=soft&color=gradient&text=Fridge%20-%20Card%20Sharing%20Platform&fontSize=30&fontAlignY=40&fontAlign=70)
+
+### Project 3: Memory Sack - Memory Game
+
+Memory Sack is a front-end memory game where users have to test their memory by repeating a sequence of words. Each level gets progressively harder.
+
+- [Live Demo](https://memory-sack-game.vercel.app/)
+
+![header](https://capsule-render.vercel.app/api?type=soft&color=gradient&text=Memory%20Sack%20-%20Memory%20Game&fontSize=30&fontAlignY=40&fontAlign=70)
+
+## 🛠️ Installation & Setup
+
+To run the portfolio project locally, follow these steps:
+
+1. Clone the repository
+   ```bash
+   git clone https://github.com/aishakey/mk-portfolio.git
+   ```
+2. Navigate to the project directory
+   ```bash
+   cd mk-portfolio
+   ```
+3. Install dependencies
+   ```bash
+   npm install
+   ```
+4. Start the development server
+   ```bash
+   npm run dev
+   ```
+
+## 📧 Contact
+
+For any inquiries, please reach out to me at:
+
+- Email: mariiyakey@gmail.com
+- LinkedIn: (https://www.linkedin.com/in/mariia-key/)
+
+![footer](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer)
