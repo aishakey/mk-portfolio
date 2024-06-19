@@ -1,5 +1,5 @@
 <p align="center" style="margin-top: 30px;">
-  <img src="https://capsule-render.vercel.app/api?type=venom&color=0:FFC0CB,100:9BF1FF&height=200&section=header&text=Welcome%20to%20Maria%20Key's%20Developer%20Portfolio&fontSize=40&fontAlignY=40&fontAlign=50&fontColor=9BF1FF" alt="header"/>
+  <img src="https://capsule-render.vercel.app/api?type=venom&color=20:FF48B0,100:FF48B0&height=200&section=header&text=Welcome%20to%20Maria%20Key's%20Developer%20Portfolio&fontSize=40&fontAlignY=40&fontAlign=50&fontColor=9BF1FF" alt="header"/>
 </p>
 <br><br>
 <h2 align="center" style="font-size: 30px;">🌸 About Me 🌸</h2>
