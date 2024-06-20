@@ -81,7 +81,7 @@ export default function ContactForm() {
           />
         </div>
       </header>
-      <div className="relative flex flex-col justify-center items-center bg-[#C5F7FF]">
+      <div className="relative flex flex-col justify-center items-center bg-[#C5F7FF] px-4 md:px-0">
         <div
           id="form"
           className="relative w-full max-w-[400px] md:max-w-[450px] p-4 bg-[#FFE1F2] rounded-xl mt-12"
@@ -98,7 +98,7 @@ export default function ContactForm() {
             >
               <label
                 htmlFor="name"
-                className="text-main-pink text-base block mt-3 w-7/12 ml-4 md:-ml-6 text-left"
+                className="text-main-pink text-base block mt-3 w-7/12 ml-16 md:-ml-6 text-left"
               >
                 Your name
               </label>
@@ -110,7 +110,7 @@ export default function ContactForm() {
                 onChange={(e) => setName(e.target.value)}
                 onFocus={() => setFocusedField("name")}
                 onBlur={() => setFocusedField(null)}
-                className="w-7/12 md:w-8/12 p-2 mt-1 rounded-2xl border-none outline-none bg-white text-dark-blue font-normal text-sm"
+                className="w-6/12 md:w-8/12 p-2 mt-1 rounded-2xl border-none outline-none bg-white text-dark-blue font-normal text-sm"
                 required
               />
             </div>
@@ -121,7 +121,7 @@ export default function ContactForm() {
             >
               <label
                 htmlFor="email"
-                className="text-main-pink text-base block mt-3 w-7/12 ml-4 md:-ml-6 text-left"
+                className="text-main-pink text-base block mt-3 w-7/12 ml-16 md:-ml-6 text-left"
               >
                 Your e-mail
               </label>
@@ -133,7 +133,7 @@ export default function ContactForm() {
                 onChange={(e) => setEmail(e.target.value)}
                 onFocus={() => setFocusedField("email")}
                 onBlur={() => setFocusedField(null)}
-                className="w-7/12 md:w-8/12 p-2 mt-1 rounded-2xl border-none outline-none bg-white text-dark-blue font-normal text-sm"
+                className="w-6/12 md:w-8/12 p-2 mt-1 rounded-2xl border-none outline-none bg-white text-dark-blue font-normal text-sm"
                 required
               />
             </div>
@@ -144,7 +144,7 @@ export default function ContactForm() {
             >
               <label
                 htmlFor="message"
-                className="text-main-pink text-base block mt-3 ml-4 md:-ml-6 w-7/12 text-left"
+                className="text-main-pink text-base block mt-3 ml-16 md:-ml-6 w-7/12 text-left"
               >
                 Your message
               </label>
@@ -155,7 +155,7 @@ export default function ContactForm() {
                 onChange={(e) => setMessage(e.target.value)}
                 onFocus={() => setFocusedField("message")}
                 onBlur={() => setFocusedField(null)}
-                className="w-7/12 md:w-8/12 px-2 mt-1 rounded-2xl border-none outline-none bg-white text-dark-blue font-normal text-sm h-20 resize-none"
+                className="w-6/12 md:w-8/12 px-2 mt-1 rounded-2xl border-none outline-none bg-white text-dark-blue font-normal text-sm h-20 resize-none"
                 required
               ></textarea>
             </div>
