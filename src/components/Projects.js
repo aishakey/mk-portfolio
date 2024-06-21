@@ -19,7 +19,7 @@ export default function Projects() {
       name: "Fridge",
       subtitle: "Personalized Online Invites & Cards",
       githubLink: "https://github.com/aishakey/fridge-card-sharing-platform",
-      liveDemoLink: "fridge-card-sharing-platform.vercel.app",
+      liveDemoLink: "https://fridge-card-sharing-platform.vercel.app/",
       email: "user@example.com",
       password: "User123!",
 
